@@ -1,17 +1,17 @@
 <template>
   <section class="page-section">
     <b-container>
-      <HeaderPage title="Gestão de Sponsors" />
+      <HeaderPage title="Gestão de Especialistas" />
       <!--MENU TOPO-->
       <b-row class="mb-4">
         <b-col cols="2"></b-col>
         <b-col>
           <router-link
-            :to="{name:'addSponsor'}"
+            :to="{name:'addExpert'}"
             tag="button"
             class="btn btn-outline-success mr-2 mt-2"
           >
-            <i class="fas fa-plus-square"></i> ADICIONAR SPONSOR
+            <i class="fas fa-plus-square"></i> ADICIONAR ESPECIALISTA
           </router-link>
           <router-link :to="{name:'admin'}" tag="button" class="btn btn-outline-info mr-2 mt-2">
             <i class="fas fa-bars"></i> MENU PRINCIPAL
@@ -32,14 +32,14 @@
                   <i class="fas fa-arrow-up" v-if="sortType===1" @click="sort()"></i>
                   <i class="fas fa-arrow-down" v-else @click="sort()"></i>
                 </th>
-                <th scope="col">Animal</th>              
+                <th scope="col">Grupo de Animais</th>              
                 <th scope="col">AÇÕES</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="animal of animals" :key="animal._id">
                 <td class="pt-4">Pedro <!--{{animal.name}}--></td>             
-                <td class="pt-4">Sapo<!--{{animal.level}}--></td>
+                <td class="pt-4">anfibio<!--{{animal.level}}--></td>
                 <td>
                   <router-link
                     :to="{name:'editAnimal', params:{animalId: animal._id}}"

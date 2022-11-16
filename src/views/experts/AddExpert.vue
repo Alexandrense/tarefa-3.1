@@ -2,7 +2,7 @@
   <!-- Portfolio Section -->
   <section class="page-section">
     <b-container>
-      <HeaderPage title="Adicionar Sponsor" />
+      <HeaderPage title="Adicionar Especialista" />
 
       <!--FORM-->
       <b-row>
@@ -22,17 +22,18 @@
             <div class="form-group">
               <select id="sltGroup" class="form-control form-control-lg" v-model="group" required>
                 <option value>-- SELECIONA GRUPO --</option>
-                <option value="anfibio">sapo</option>
-                <option value="ave">coleho</option>
-                <option value="mamifero">cavalo</option>
-                <option value="peixe">cobra</option>
+                <option value="anfibio">ANFÍBIO</option>
+                <option value="ave">AVE</option>
+                <option value="mamifero">MAMÍFERO</option>
+                <option value="peixe">PEIXE</option>
+                <option value="reptil">RÉPTIL</option>
               </select>
             </div>
             <div class="form-group">
               <textarea
                 id="txtDescription"
                 class="form-control form-control-lg"
-                placeholder="escreve mensagem do sponsor"
+                placeholder="escreve descrição do especialista"
                 cols="30"
                 rows="10"
                 v-model="description"
@@ -43,7 +44,7 @@
             <button type="submit" class="btn btn-outline-success btn-lg mr-2">
               <i class="fas fa-plus-square"></i>  ADICIONAR</button>
             <router-link
-              :to="{name: 'listSponsors'}"
+              :to="{name: 'listExperts'}"
               tag="button"
               class="btn btn-outline-danger btn-lg"
             ><i class="fas fa-window-close"></i>  CANCELAR</router-link>
