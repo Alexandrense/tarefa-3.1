@@ -31,10 +31,32 @@
                     <!-- Ranking -->
                     <i class="fas fa-clipboard-list fa-lg ml-2"></i>
                     3
+                    <!-- Sponsors -->
+                    <i class="fas fa-users fa-lg ml-2"></i>
+                    15
                   </b-card-text>
                   <b-card-text>
                     <b>Descrição:</b>
                     {{animal.description}}
+                  </b-card-text>
+                  <b-card-text>
+                    <b>Especialista:</b>
+                    Pedro
+                  </b-card-text>
+                  <b-card-text>
+                    <b>Mensagem do Especialista:</b>
+                    Sapo é uma designação genérica de anfíbios da ordem Anura predominantemente terrestres, com pele rugosa, e glândulas parotoides semelhantes a verrugas. É usado especialmente em relação a membros da família Bufonidae. 
+                  </b-card-text>
+                  <b-card-text>
+                    <b>Mensagens dos Sponsors:</b>
+                    <b-alert
+                      show
+                      variant="secondary"
+                      v-for="comment in this.animal.comments"
+                      :key="comment._id"
+                    >
+                      ...
+                    </b-alert>
                   </b-card-text>
                   <b-card-text>
                     <b>Comentários:</b>
@@ -49,7 +71,7 @@
                       <br />
                       {{comment.body}}
                     </b-alert>
-                  </b-card-text>
+                  </b-card-text>                 
                   <b-card-text>
                     <b>Comentário:</b>
                     <div class="form-group">

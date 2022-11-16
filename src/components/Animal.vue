@@ -19,6 +19,8 @@
         {{animal.evaluation.length}}
         <i class="fas fa-comment fa-lg ml-2"></i>
         {{animal.comments.length}}
+        <i class="fas fa-users fa-lg ml-2"></i>
+        15
       </b-card-text>
 
       <router-link
@@ -33,6 +35,8 @@
       <b-button variant="info" :href="'https://www.facebook.com/sharer/sharer.php?u=' + animal.links[0].url" target="_blank">
         <i class="fab fa-facebook"></i> Partilhar
       </b-button>
+
+      <b-card-text>Especialista: Pedro</b-card-text>
 
     </b-card>
   </b-col>
